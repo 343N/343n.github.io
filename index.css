@@ -1,6 +1,19 @@
 body {
   background-color: rgba(20,20,20,255);
   color: white;
+  font-family: sans-serif;
+}
+
+
+div {
+  text-align: center;
+  vertical-align: center;
+}
+
+.textHeading {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 #geneticsSection {
