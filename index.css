@@ -57,7 +57,7 @@ a {
   height: 100%;
   box-sizing: border-box;
   font-weight: lighter;
-  border-bottom: 2px solid black;
+  /*border-bottom: 2px solid black;*/
   top: 0;
   position: absolute;
   animation-name: titleDivIntro;
