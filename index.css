@@ -31,10 +31,12 @@ a {
   50% {
     height: 100%;
     line-height: 100vh;
+    font-size: 4vw;
   }
   100% {
     height: 10%;
     line-height: 10vh;
+    font-size: 3vw;
   }
 }
 
@@ -53,6 +55,7 @@ a {
 #title {
   align-content: center;
   text-align: center;
+  font-size: 4vw;
   width: 100%;
   height: 100%;
   box-sizing: border-box;
@@ -71,7 +74,7 @@ a {
 
 #titleSpan {
   /*line-height: 10vh;*/
-  font-size: 3vw;
+  /*font-size: 3vw;*/
 
 }
 
@@ -102,7 +105,7 @@ a {
 
 .contentBox:hover {
   font-size: 2.25vw;
-  line-height: 22.5vh;
+  /*line-height: 22.5vh;*/
   height: 22.5%;
   /*height: 30%;
   width: 30%;*/
