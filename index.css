@@ -63,7 +63,7 @@ a {
   animation-name: titleDivIntro;
   animation-fill-mode: forwards;
   animation-duration: 2s;
-  line-height: 50vw;
+  line-height: 100vw;
   background-color: rgba(40,40,40,.95);
   z-index: 1;
   /*animation-fill-mode: none;*/
@@ -100,6 +100,7 @@ a {
 
 .contentBox:hover {
   font-size: 2.25vw;
+  line-height: 22.5vh;
   height: 22.5%;
   /*height: 30%;
   width: 30%;*/
