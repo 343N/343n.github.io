@@ -7,12 +7,14 @@ body {
   left: 0;
   top: 0;
   height: 100%;
+  border-right: 1px solid white;
   width: 50%;
 }
 
 #rainSection {
   left: 50%;
   top: 0;
+  border-left: 1px solid white;
   height: 100%;
   width: 50%;
 }
