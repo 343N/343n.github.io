@@ -1,0 +1,18 @@
+body {
+  background-color: rgba(20,20,20,255);
+  color: white;
+}
+
+#geneticsSection {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 50%;
+}
+
+#rainSection {
+  left: 50%;
+  top: 0;
+  height: 100%;
+  width: 50%;
+}
