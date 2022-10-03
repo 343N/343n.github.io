@@ -25,6 +25,7 @@ a:hover {
 
 #pageHeading {
     z-index: 10;
+    font-weight: 300;
     /* box-shadow: 0px 0px 0px 20px #000000; */
     box-shadow: inset 0px 0px 10em 0em #00000040;
 }
@@ -44,4 +45,7 @@ a:hover {
 #pageContent {
     background-color: lightgray;
     padding-top: 1rem;
+    
+    box-shadow: inset 0px 0px 10em 10em #00000022;
+
 }
