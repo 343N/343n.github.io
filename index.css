@@ -30,6 +30,11 @@ a:hover {
     box-shadow: inset 0px 0px 10em 0em #00000040;
 }
 
+#pageHeading > .d-flex {
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
 #portrait {
     width: 8rem;
     outline: 2px solid #ffffff11;
@@ -47,5 +52,4 @@ a:hover {
     padding-top: 1rem;
     
     box-shadow: inset 0px 0px 10em 10em #00000022;
-
 }
