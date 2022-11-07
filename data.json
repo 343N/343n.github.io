@@ -1,0 +1,73 @@
+{
+    "CATEGORIES": ["current", "past"],
+    "LINK_TEMPLATES": {
+        "github": {
+            "link_template": "https://github.com/343N/{}",
+            "icon_url": "img/GitHub-Mark-32px.png",
+            "alt_template": "GitHub for {}"
+        },
+        "website": {
+            "link_template": "{}",
+            "icon_url": "img/globe-icon.svg",
+            "alt_template": "Website for {}"
+
+        }
+    },
+    "current": [{
+            "title": "The Internet Time Capsule",
+            "website": "http://internettimecapsule.net/",
+            "github": "internet-time-capsule",
+            "download": ""
+        },
+        {
+            "title": "Discord Archive Bot",
+            "website": "",
+            "github": "internet-time-capsule",
+            "download": ""
+        },
+        {
+            "title": "Music Trainer",
+            "website": "",
+            "github": "music_trainer",
+            "download": ""
+        },
+        {
+            "title": "",
+            "website": "",
+            "github": "",
+            "download": ""
+        }
+    ],
+    "past": [{
+            "title": "Factorio Modifications",
+            "website": "",
+            "github": "factorio-mods",
+            "download": ""
+        },
+        {
+            "title": "Space Engineer's Thruster Calculator",
+            "website": "https://343n.github.io/spaceengineers-thrust-calc",
+            "github": "spaceengineers-thrust-calc",
+            "download": ""
+        },
+        {
+            "title": "Pollster",
+            "website": "",
+            "github": "Pollster",
+            "download": ""
+        },
+        {
+            "title": "Business Builder",
+            "website": "",
+            "github": "",
+            "download": "",
+            "hidden": true
+        },
+        {
+            "title": "",
+            "website": "",
+            "github": "",
+            "download": ""
+        }
+    ]
+}

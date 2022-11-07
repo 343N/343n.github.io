@@ -9,6 +9,11 @@ body {
     font-family: 'Open Sans';
 }
 
+span.projectLi {
+    display:inline-block; 
+    vertical-align: middle;
+}
+
 img.linkicon {
     height: 1em;
     display:inline-block
