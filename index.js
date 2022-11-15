@@ -1,3 +1,4 @@
+const DATA_FILE_URL = "data.json"
 let PROJECT_DATA = null;
 
 // retrieve JSON from some URL asynchronously
@@ -18,16 +19,31 @@ function getJSON(url){
 
 // populate the page with my projects (in data.json)
 function populateProjects(){
-    const PROJECT_CATEGORIES = PROJECT_DATA.CATEGORIES
-    
+    const PROJECT_CATEGORIES = Object.keys(PROJECT_DATA.projects)
+    const PROJECT_CONTAINER = document.querySelector("#projectsContainer")
+
     for (let cat of PROJECT_CATEGORIES){
-        list = document.querySelector(`ul#${cat}-list`);
-        console.log(list)
-        for (let projData of PROJECT_DATA[cat]){
+        const PDATA = PROJECT_DATA.projects[cat]
+        let heading = document.createElement('h3')
+        heading.innerText = PDATA.title
+    
+        let table = document.createElement('table')
+        let tbody = document.createElement('tbody')
+        table.appendChild(tbody)
+        // let list = document.createElement("ul")
+        // list.id = `${cat}-list`;
+
+        
+    
+        PROJECT_CONTAINER.appendChild(heading)
+        PROJECT_CONTAINER.appendChild(table)
+
+        console.log(table)
+        for (let projData of PDATA.items){
             let html = createProjectHTML(projData)
             if (!html) continue;
             // console.log(html)
-            list.appendChild(html)
+            tbody.appendChild(html)
         }
     }
 }
@@ -35,22 +51,31 @@ function populateProjects(){
 // create the html for an individual project
 function createProjectHTML(data){
     if (!shouldShowProject(data)) return null;
-    let li = document.createElement('li')
+    let row = document.createElement('tr')
+    let titleColumn = document.createElement('td')
+    
+    row.appendChild(titleColumn)
+    
     let span = document.createElement('span')
     span.className = "projectLi"
-    li.appendChild(span)
-    li.innerHTML += `${data.title} | `
+    titleColumn.appendChild(span)
+    titleColumn.innerHTML += `${data.title} `
+
 
     const LINK_TYPES = Object.keys(PROJECT_DATA.LINK_TEMPLATES)
 
     for (let t of LINK_TYPES){
-        if (!data[t]) continue
+        let col = document.createElement('td')
+        row.appendChild(col)
+        if (!data[t]) continue 
         const TDATA = PROJECT_DATA.LINK_TEMPLATES[t]
 
         const LINK_TEMPLATE = TDATA.link_template
         const ALT_TEMPLATE = TDATA.alt_template
         const IMG_ICON = TDATA.icon_url
         
+
+
         // create the link
         let a = document.createElement('a')
         a.href = LINK_TEMPLATE.replace("{}", data[t])
@@ -64,10 +89,10 @@ function createProjectHTML(data){
         // append to the list item
         a.appendChild(img)
         a.innerHTML += " "
-        li.appendChild(a)
+        col.appendChild(a)
     }
 
-    return li
+    return row
 }
 
 // whether we should display the project on the page 
@@ -78,7 +103,7 @@ function shouldShowProject(data){
 
 // load the project data and populate the page
 async function main(){
-    PROJECT_DATA = await getJSON("data.json")
+    PROJECT_DATA = await getJSON(DATA_FILE_URL)
     populateProjects()
 }
 

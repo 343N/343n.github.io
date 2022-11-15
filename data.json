@@ -13,61 +13,76 @@
 
         }
     },
-    "current": [{
-            "title": "The Internet Time Capsule",
-            "website": "http://internettimecapsule.net/",
-            "github": "internet-time-capsule",
-            "download": ""
+    "projects": {
+        "current": {
+            "title": "Things I'm working on:",
+            "items": [{
+                    "title": "The Internet Time Capsule",
+                    "website": "http://internettimecapsule.net/",
+                    "github": "internet-time-capsule",
+                    "download": ""
+                },
+                {
+                    "title": "Discord Archive Bot",
+                    "website": "",
+                    "github": "internet-time-capsule",
+                    "download": ""
+                },
+                {
+                    "title": "Music Trainer",
+                    "website": "",
+                    "github": "music_trainer",
+                    "download": ""
+                },
+                {
+                    "title": "",
+                    "website": "",
+                    "github": "",
+                    "download": ""
+                }
+            ]
         },
-        {
-            "title": "Discord Archive Bot",
-            "website": "",
-            "github": "internet-time-capsule",
-            "download": ""
-        },
-        {
-            "title": "Music Trainer",
-            "website": "",
-            "github": "music_trainer",
-            "download": ""
-        },
-        {
-            "title": "",
-            "website": "",
-            "github": "",
-            "download": ""
+        "past": {
+            "title": "Things I've worked on:",
+            "items": [
+                {
+                    "title": "Flashcards App",
+                    "website": "flashcards.343n.co",
+                    "github": "flashcards-app",
+                    "download": ""
+                },
+                {
+                    "title": "Factorio Modifications",
+                    "website": "",
+                    "github": "factorio-mods",
+                    "download": ""
+                },
+                {
+                    "title": "Space Engineer's Thruster Calculator",
+                    "website": "https://343n.github.io/spaceengineers-thrust-calc",
+                    "github": "spaceengineers-thrust-calc",
+                    "download": ""
+                },
+                {
+                    "title": "Pollster",
+                    "website": "",
+                    "github": "Pollster",
+                    "download": ""
+                },
+                {
+                    "title": "Business Builder",
+                    "website": "",
+                    "github": "",
+                    "download": "",
+                    "hidden": true
+                },
+                {
+                    "title": "",
+                    "website": "",
+                    "github": "",
+                    "download": ""
+                }
+            ]
         }
-    ],
-    "past": [{
-            "title": "Factorio Modifications",
-            "website": "",
-            "github": "factorio-mods",
-            "download": ""
-        },
-        {
-            "title": "Space Engineer's Thruster Calculator",
-            "website": "https://343n.github.io/spaceengineers-thrust-calc",
-            "github": "spaceengineers-thrust-calc",
-            "download": ""
-        },
-        {
-            "title": "Pollster",
-            "website": "",
-            "github": "Pollster",
-            "download": ""
-        },
-        {
-            "title": "Business Builder",
-            "website": "",
-            "github": "",
-            "download": "",
-            "hidden": true
-        },
-        {
-            "title": "",
-            "website": "",
-            "github": "",
-            "download": ""
-        }
-    ]
+    }
 }
