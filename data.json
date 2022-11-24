@@ -16,7 +16,14 @@
     "projects": {
         "current": {
             "title": "Things I'm working on:",
-            "items": [{
+            "items": [
+                {
+                    "title": "Flashcards",
+                    "website": "https://flashcards.343n.co",
+                    "github": "flashcards-app",
+                    "download": ""
+                },
+                {
                     "title": "The Internet Time Capsule",
                     "website": "http://internettimecapsule.net/",
                     "github": "internet-time-capsule",
@@ -46,12 +53,6 @@
         "past": {
             "title": "Things I've worked on:",
             "items": [
-                {
-                    "title": "Flashcards",
-                    "website": "https://flashcards.343n.co",
-                    "github": "flashcards-app",
-                    "download": ""
-                },
                 {
                     "title": "Factorio Modifications",
                     "website": "https://mods.factorio.com/user/343N",
