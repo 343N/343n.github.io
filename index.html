@@ -10,6 +10,12 @@
     <!-- JQuery -->
     <script src="jquery-3.6.1.min.js"></script>
 
+    
+    <!-- matter.js -->
+    <!-- <script src="matter.js"></script> -->
+    <!-- matter-dom-plugin  -->
+    <!-- <script src="matter-dom-plugin.js"></script> --> 
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eren Yuksel - Software Engineer</title>
@@ -31,11 +37,12 @@
 </head>
 
 <body>
+    <div id="debug"></div>
     <div id="pageHeading" class="w-100 h-50 d-flex align-items-center justify-content-center">
         
         <div class="text-light d-flex">
-            <div>
-                <img id="portrait" src="portrait.png" alt="A photo of me.">
+            <div id="portrait" matter>
+                <img id="portrait" src="img/portrait.png" alt="A photo of me.">
             </div>
             <div>
                 <div id="heading">
@@ -45,7 +52,7 @@
                 <br>
     
                 <div id="contact"><a href="mailto:eren@343n.co">✉ Email</a> | <a href="https://github.com/343N"><img class="linkicon"
-                            src="img/GitHub-Mark-Light-32px.png"> GitHub</a></div>
+                            src="img/GitHub-Mark-Light-32px.png" alt="My Github"> GitHub</a></div>
             </div>
         </div>
     </div>
@@ -59,5 +66,6 @@
     </div>
 
     <script src="/index.js"></script>
+    <script src="/spotlight.js"></script>
 
 </body>

@@ -66,6 +66,7 @@ function createProjectHTML(data){
 
     for (let t of LINK_TYPES){
         let col = document.createElement('td')
+        col.classList.add('linkColumn')
         row.appendChild(col)
         if (!data[t]) continue 
         const TDATA = PROJECT_DATA.LINK_TEMPLATES[t]

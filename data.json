@@ -32,7 +32,8 @@
                     "title": "Music Trainer",
                     "website": "",
                     "github": "music_trainer",
-                    "download": ""
+                    "download": "",
+                    "hidden": true
                 },
                 {
                     "title": "",
@@ -46,14 +47,14 @@
             "title": "Things I've worked on:",
             "items": [
                 {
-                    "title": "Flashcards App",
-                    "website": "flashcards.343n.co",
+                    "title": "Flashcards",
+                    "website": "https://flashcards.343n.co",
                     "github": "flashcards-app",
                     "download": ""
                 },
                 {
                     "title": "Factorio Modifications",
-                    "website": "",
+                    "website": "https://mods.factorio.com/user/343N",
                     "github": "factorio-mods",
                     "download": ""
                 },
