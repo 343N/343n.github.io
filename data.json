@@ -16,8 +16,7 @@
     "projects": {
         "current": {
             "title": "Things I'm working on:",
-            "items": [
-                {
+            "items": [{
                     "title": "Flashcards",
                     "website": "https://flashcards.343n.co",
                     "github": "flashcards-app",
@@ -52,8 +51,7 @@
         },
         "past": {
             "title": "Things I've worked on:",
-            "items": [
-                {
+            "items": [{
                     "title": "Factorio Modifications",
                     "website": "https://mods.factorio.com/user/343N",
                     "github": "factorio-mods",

@@ -30,9 +30,6 @@ function populateProjects(){
         let table = document.createElement('table')
         let tbody = document.createElement('tbody')
         table.appendChild(tbody)
-        // let list = document.createElement("ul")
-        // list.id = `${cat}-list`;
-
         
     
         PROJECT_CONTAINER.appendChild(heading)
