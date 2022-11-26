@@ -1,6 +1,9 @@
 const DATA_FILE_URL = "data.json"
 let PROJECT_DATA = null;
 
+
+
+
 // retrieve JSON from some URL asynchronously
 function getJSON(url){
     return new Promise((res, rej) => {
@@ -24,47 +27,79 @@ function populateProjects(){
 
     for (let cat of PROJECT_CATEGORIES){
         const PDATA = PROJECT_DATA.projects[cat]
-        let heading = document.createElement('h3')
+        const MASTER_CONTAINER = createElement('div.projectCategory', PROJECT_CONTAINER)
+        let heading = createElement('div.projectsTitle', MASTER_CONTAINER)
         heading.innerText = PDATA.title
     
-        let table = document.createElement('table')
-        let tbody = document.createElement('tbody')
-        table.appendChild(tbody)
-        
-    
-        PROJECT_CONTAINER.appendChild(heading)
-        PROJECT_CONTAINER.appendChild(table)
+        const spinnerContainer = createElement('div.projectsSpinnerContainer', PROJECT_CONTAINER)
+        const spinner = createElement('div.projectsSpinner', spinnerContainer)
+        spinnerContainer.addEventListener("wheel", scrollListener)
 
-        console.log(table)
         for (let projData of PDATA.items){
             let html = createProjectHTML(projData)
             if (!html) continue;
             // console.log(html)
-            tbody.appendChild(html)
+            spinner.appendChild(html)
         }
     }
+}
+
+// create elements and set classes/id's with a selector syntax
+// i.e. createElement(div#id.class1.class2) will return a div
+// with the respective ID and classes
+function createElement(string, parent=null){
+    const elementRegex = /^([^.\# ]+)/g
+    const idRegex = /(#[^ \.#]+)/g
+    const classRegex = /\.([^ \.#]+)/g
+    
+    string = string.trim()
+    const elementType = string.match(elementRegex)
+    const id = string.match(idRegex)?.map(x => x.slice(1))
+    const classes = string.match(classRegex)?.map(x => x.slice(1))
+    
+    const element = document.createElement(elementType)
+    if (id) element.id = id
+    if (classes) element.classList.add(...classes)
+    if (parent) parent.appendChild(element)
+    return element
 }
 
 // create the html for an individual project
 function createProjectHTML(data){
     if (!shouldShowProject(data)) return null;
-    let row = document.createElement('tr')
-    let titleColumn = document.createElement('td')
-    
-    row.appendChild(titleColumn)
-    
-    let span = document.createElement('span')
-    span.className = "projectLi"
-    titleColumn.appendChild(span)
-    titleColumn.innerHTML += `${data.title} `
+    const block = createElement('div.projectBlock')
+    // block inner divs
+    createElement('div.projectOverlay', block)
 
+    const media = createElement('div.projectMedia', block)
+    if (!data.media){
+        const image = createElement('img.media', media)
+        image.src = "img/missing.png"
+    } else {
+        const video = createElement('video.media', media)
+        video.setAttribute('loop', '')
+        video.setAttribute('muted', '')
+        video.setAttribute('autoplay', '')
+        video.setAttribute('src', data.media)
+    }
 
+    const heading = createElement('div.projectBlockHeading', block)
+    heading.innerText = data.title
+
+    const content = createElement('div.projectBlockContent', block)
+    const textContainer = createElement('div', content)
+    
+    const miniHeading = createElement('b', textContainer)
+    miniHeading.innerText = data.title
+    // console.log(block)
+    const p = createElement('p', textContainer)
+    p.innerText += data.description
+    // console.log(block)
+    
+    const linkContainer = createElement('div.projectLinks', content)
     const LINK_TYPES = Object.keys(PROJECT_DATA.LINK_TEMPLATES)
 
     for (let t of LINK_TYPES){
-        let col = document.createElement('td')
-        col.classList.add('linkColumn')
-        row.appendChild(col)
         if (!data[t]) continue 
         const TDATA = PROJECT_DATA.LINK_TEMPLATES[t]
 
@@ -75,28 +110,31 @@ function createProjectHTML(data){
 
 
         // create the link
-        let a = document.createElement('a')
+        console.log(data[t])
+        const a = createElement('a', linkContainer)
         a.href = LINK_TEMPLATE.replace("{}", data[t])
         
         // create the link icon
-        let img = document.createElement('img')
-        img.className = "linkicon"
-        img.alt = ALT_TEMPLATE.replace("{}", data[t].title)
+        const img = createElement('img.projectLink', a)
+        img.alt = ALT_TEMPLATE.replace("{}", data.title)
         img.src = IMG_ICON
        
-        // append to the list item
-        a.appendChild(img)
-        a.innerHTML += " "
-        col.appendChild(a)
     }
-
-    return row
+    console.log(block)
+    return block
 }
 
 // whether we should display the project on the page 
 // (only if there's a title and there's no "hidden" flag)
 function shouldShowProject(data){
     return data.title && !("hidden" in data)
+}
+
+function scrollListener(event){
+    if (!event.deltaY) return;
+
+    event.currentTarget.scrollLeft += event.deltaY + event.deltaX
+    event.preventDefault()
 }
 
 // load the project data and populate the page

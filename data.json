@@ -3,83 +3,108 @@
     "LINK_TEMPLATES": {
         "github": {
             "link_template": "https://github.com/343N/{}",
-            "icon_url": "img/GitHub-Mark-32px.png",
+            "icon_url": "img/GitHub-Mark-Light-120px-plus.png",
             "alt_template": "GitHub for {}"
         },
         "website": {
             "link_template": "{}",
             "icon_url": "img/globe-icon.svg",
             "alt_template": "Website for {}"
-
+        },
+        "download": {
+            "link_template": "{}",
+            "icon_url": "img/download-icon.png",
+            "alt_template": "Download link for {}"
         }
     },
     "projects": {
         "current": {
-            "title": "Things I'm working on:",
+            "title": "Active Projects",
             "items": [{
                     "title": "Flashcards",
                     "website": "https://flashcards.343n.co",
                     "github": "flashcards-app",
-                    "download": ""
-                },
+                    "download": "",
+                    "media": "img/flashcards.mp4",
+                    "description": "Create and train yourself against flashcards, utilizing spaced repetition learning to help you learn more efficiently."                },
                 {
-                    "title": "The Internet Time Capsule",
+                    "title": "Internet Time Capsule",
                     "website": "http://internettimecapsule.net/",
                     "github": "internet-time-capsule",
-                    "download": ""
+                    "download": "",
+                    "media": "",
+                    "description": "Save it for the future. Coming soon."
                 },
                 {
                     "title": "Discord Archive Bot",
                     "website": "",
                     "github": "internet-time-capsule",
-                    "download": ""
+                    "download": "",
+                    "media": "",
+                    "description": "Discord bot to archive discord messages. Work-in-progress."
                 },
                 {
                     "title": "Music Trainer",
                     "website": "",
                     "github": "music_trainer",
                     "download": "",
-                    "hidden": true
+                    "media": "",
+                    "hidden": true,
+                    "description": "You'll get better at music using this. Trust."
                 },
                 {
                     "title": "",
                     "website": "",
                     "github": "",
-                    "download": ""
+                    "download": "",
+                    "media": "",
+                    "description": ""
                 }
             ]
         },
         "past": {
-            "title": "Things I've worked on:",
-            "items": [{
+            "title": "Past Projects",
+            "items": [
+                {
+                    "title": "Business Builder",
+                    "website": "",
+                    "github": "",
+                    "download": "http://businessbuilder.343n.co/",
+                    "media": "img/bizbuilder-cropped.mp4",
+                    "description": "An incremental idle game made for Android"
+                },
+                {
                     "title": "Factorio Modifications",
                     "website": "https://mods.factorio.com/user/343N",
                     "github": "factorio-mods",
-                    "download": ""
+                    "download": "",
+                    "media": "img/factorio.mp4",
+                    "description": "Multiple modifications for the game Factorio."
                 },
                 {
                     "title": "Space Engineer's Thruster Calculator",
                     "website": "https://343n.github.io/spaceengineers-thrust-calc",
                     "github": "spaceengineers-thrust-calc",
-                    "download": ""
+                    "download": "",
+                    "media": "img/secalc.mp4",
+                    "description": "Calculate how many thrusters you need for your Space Engineer's spaceship, depending on gravity and weight."
                 },
                 {
                     "title": "Pollster",
                     "website": "",
                     "github": "Pollster",
-                    "download": ""
+                    "download": "",
+                    "media": "img/pollster.mp4",
+                    "description": "A discord bot that lets you create and participate in polls!"
                 },
                 {
-                    "title": "Business Builder",
-                    "website": "",
+                    "title": "My YOOTOOB",
+                    "website": "https://youtube.com/343N",
                     "github": "",
-                    "download": "http://businessbuilder.343n.co/"
-                },
-                {
-                    "title": "",
-                    "website": "",
-                    "github": "",
-                    "download": ""
+                    "download": "",
+                    "media": "",
+                    "description": "It's a youtube channel, whodathunkit?",
+                    "hidden": true
                 }
             ]
         }
