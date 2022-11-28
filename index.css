@@ -6,20 +6,18 @@ body {
     height: 100%;
     background-color: var(--bs-gray-900);
     font-family: 'Open Sans';
+    overflow-y: overlay;
+
 }
 
 :root {
     /* cursor: none; */
-    --cursorX: 50vw;
-    --cursorY: 50vh;
+    /* --cursorX: 50vw;
+    --cursorY: 50vh; */
     --projectBlockSize: 20rem;
     /* --skewX: 0;
     --skewY: 0; */
 }
-
-/* @keyframes {
-    
-} */
 
 .easterEgg::before{
     content: '';
@@ -124,14 +122,16 @@ a:hover {
     display: flex;
     /* height: 20rem; */
     /* min-width: 20rem; */
+    /* max-height: 8rem; */
     overflow-x: auto;
     overflow-y: hidden;
     max-width: 100%;
+    padding-top:1rem;
+    padding-bottom:1rem;
     /* min-width: 100%; */
     justify-content: left;
-    scroll-behavior: smooth;
     /* resize: none; */
-    height: 8rem;
+    /* height: 8rem; */
     transition: all 0.3s;
 }
 
@@ -142,12 +142,20 @@ a:hover {
 }
 
 .projectsSpinnerContainer:hover {
-    height: 20rem;
-    margin-bottom: 1rem;
+    /* height: 20rem;m */
+    /* min-height: 20rem; */
+    max-height:max-content;
+    /* margin-bottom: 1rem; */
 }
 
 .projectsSpinner {
     display: flex;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    max-width: 100%;
+    transition: all 0.3s; 
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .projectBlock {
@@ -158,6 +166,7 @@ a:hover {
     overflow: hidden;
     margin-left: 1rem;
     margin-right: 1rem;
+    margin-bottom: 1rem;
     /* margin: 1rem; */
     /* background-color: black; */
     box-shadow: 0px 0px 12px rgba(0,0,0,0.5);
@@ -240,6 +249,8 @@ img.projectLink {
     height: 1.5rem;
     color: white;
     margin-left: 0.25rem;
+    outline: none;
+    pointer-events: none; 
     border-radius: 1rem;
 }
 

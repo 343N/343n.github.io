@@ -25,14 +25,20 @@
                     "website": "https://flashcards.343n.co",
                     "github": "flashcards-app",
                     "download": "",
-                    "media": "img/flashcards.mp4",
+                    "media": {
+                        "type": "video",
+                        "src": "video/flashcards.mp4"
+                    },
                     "description": "Create and train yourself against flashcards, utilizing spaced repetition learning to help you learn more efficiently."                },
                 {
                     "title": "Internet Time Capsule",
                     "website": "http://internettimecapsule.net/",
                     "github": "internet-time-capsule",
                     "download": "",
-                    "media": "",
+                    "media": {
+                        "type": "video",
+                        "src": "video/timecapsule.mp4"
+                    },
                     "description": "Save it for the future. Coming soon."
                 },
                 {
@@ -40,7 +46,10 @@
                     "website": "",
                     "github": "internet-time-capsule",
                     "download": "",
-                    "media": "",
+                    "media": {
+                        "type": "image",
+                        "src": "img/archive-bot.png"
+                    },
                     "description": "Discord bot to archive discord messages. Work-in-progress."
                 },
                 {
@@ -48,17 +57,12 @@
                     "website": "",
                     "github": "music_trainer",
                     "download": "",
-                    "media": "",
+                    "media": {
+                        "type": "video",
+                        "src": ""
+                    },
                     "hidden": true,
                     "description": "You'll get better at music using this. Trust."
-                },
-                {
-                    "title": "",
-                    "website": "",
-                    "github": "",
-                    "download": "",
-                    "media": "",
-                    "description": ""
                 }
             ]
         },
@@ -70,7 +74,10 @@
                     "website": "",
                     "github": "",
                     "download": "http://businessbuilder.343n.co/",
-                    "media": "img/bizbuilder-cropped.mp4",
+                    "media": {
+                        "type": "video",
+                        "src": "video/bizbuilder-cropped.mp4"
+                    },
                     "description": "An incremental idle game made for Android"
                 },
                 {
@@ -78,7 +85,10 @@
                     "website": "https://mods.factorio.com/user/343N",
                     "github": "factorio-mods",
                     "download": "",
-                    "media": "img/factorio.mp4",
+                    "media": {
+                        "type": "video",
+                        "src": "video/factorio.mp4"
+                    },
                     "description": "Multiple modifications for the game Factorio."
                 },
                 {
@@ -86,7 +96,10 @@
                     "website": "https://343n.github.io/spaceengineers-thrust-calc",
                     "github": "spaceengineers-thrust-calc",
                     "download": "",
-                    "media": "img/secalc.mp4",
+                    "media": {
+                        "type": "video",
+                        "src": "video/secalc.mp4"
+                    },
                     "description": "Calculate how many thrusters you need for your Space Engineer's spaceship, depending on gravity and weight."
                 },
                 {
@@ -94,7 +107,10 @@
                     "website": "",
                     "github": "Pollster",
                     "download": "",
-                    "media": "img/pollster.mp4",
+                    "media": {
+                        "type": "video",
+                        "src": "video/pollster.mp4"
+                    },
                     "description": "A discord bot that lets you create and participate in polls!"
                 },
                 {
@@ -102,7 +118,10 @@
                     "website": "https://youtube.com/343N",
                     "github": "",
                     "download": "",
-                    "media": "",
+                    "media": {
+                        "type": "image",
+                        "src": ""
+                    },
                     "description": "It's a youtube channel, whodathunkit?",
                     "hidden": true
                 }
