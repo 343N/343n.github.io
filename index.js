@@ -85,6 +85,7 @@ function createProjectHTML(data) {
       case "video":
         const video = createElement("video.media", media);
         video.setAttribute("muted", "");
+        video.setAttribute("preload", 'metadata')
         video.setAttribute("src", data.media.src);
         block.addEventListener("mouseenter", () => {
           video.play();
